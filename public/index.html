@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Todo App</title>
+
+        <link rel="manifest" href="/manifest.json">
+    </head>
+
+    <body>
+        <div id="app"></div>
+
+        <noscript id="deferred-styles">
+            <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+            <link rel="stylesheet" href="/css/main.css">
+        </noscript>
+        <script>
+            var loadDeferredStyles = function() {
+                var addStylesNode = document.getElementById('deferred-styles')
+                var replacement = document.createElement('div')
+                replacement.innerHTML = addStylesNode.textContent
+                document.body.appendChild(replacement)
+                addStylesNode.parentElement.removeChild(addStylesNode)
+            }
+
+            var raf = requestAnimationFrame || mozRequestAnimationFrame || webkitRequestAnimationFrame || msRequestAnimationFrame
+            if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); })
+            else window.addEventListener('load', loadDeferredStyles)
+        </script>
+        <script defer src="/js/bundle.js"></script>
+    </body>
+</html>
