@@ -6,7 +6,7 @@ export default class Search extends React.Component {
             <div>
                 <div className="jumbotron">
                     <div className="container">
-                        <h1>About</h1>
+                        <h1>About the boilerplate</h1>
                     </div>
                 </div>
 
