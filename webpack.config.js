@@ -35,7 +35,7 @@ module.exports = {
     devServer: {
         contentBase: __dirname + '/public',
         historyApiFallback: true,
-        host: 'localhost',
+        host: '0.0.0.0',
         inline: true,
         port: port,
         open: true,

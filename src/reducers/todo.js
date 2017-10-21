@@ -6,12 +6,16 @@ const reducer = (state = initState, action) => {
     case 'FETCH_ITEMS':
         return state
     case 'CREATE_ITEM':
-        state.push({ id: counter, description: action.data })
         counter++
-        return state
+        return [
+            ...state,
+            {
+                id: counter,
+                description: action.data
+            }
+        ]
     case 'DELETE_ITEM':
-        state = state.filter((item) => item.id != action.data)
-        return state
+        return state.filter((item) => item.id != action.data)
     default:
         return state
     }

@@ -14,7 +14,7 @@ class Item extends React.Component {
                 <td>{this.props.id}</td>
                 <td>{this.props.description}</td>
                 <td className="text-right">
-                    <Link to="#" onClick={this.handleDelete.bind(this)}><i className="ion-trash-b" /></Link>
+                    <Link to="#" onClick={this.handleDelete.bind(this)}><i className="ion ion-trash-b" /></Link>
                 </td>
             </tr>
         )
